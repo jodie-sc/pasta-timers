@@ -1,7 +1,6 @@
 let timer;
 let work = 50;
-let rest = 10;
-let timeLeft = work * 60;
+let rest = 5;
 let isRunning = false;
 let isWorkSession = true;
 
@@ -12,6 +11,10 @@ const pauseBtn = document.getElementById("pause");
 const resetBtn = document.getElementById("reset");
 const ringSound = document.getElementById('ringSound');
 const clickSound = document.getElementById('clickSound');
+const title = document.getElementsByTagName('title');
+
+work = Number(timerDisplay.textContent.split(':')[0]);
+let timeLeft = work * 60;
 
 function updateDisplay() {
   const minutes = Math.floor(timeLeft / 60);
