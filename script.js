@@ -1,5 +1,7 @@
 let timer;
-let timeLeft = 50 * 60;
+let work = 50;
+let rest = 10;
+let timeLeft = work * 60;
 let isRunning = false;
 let isWorkSession = true;
 
@@ -8,6 +10,8 @@ const statusDisplay = document.getElementById("status");
 const startBtn = document.getElementById("start");
 const pauseBtn = document.getElementById("pause");
 const resetBtn = document.getElementById("reset");
+const ringSound = document.getElementById('ringSound');
+const clickSound = document.getElementById('clickSound');
 
 function updateDisplay() {
   const minutes = Math.floor(timeLeft / 60);
@@ -17,16 +21,19 @@ function updateDisplay() {
 
 function startTimer() {
   if (!isRunning) {
+    clickSound.play();
     isRunning = true;
     timer = setInterval(() => {
       timeLeft--;
       updateDisplay();
 
       if (timeLeft <= 0) {
-        clearInterval(timer);
+        ringSound.currentTime = 0; // rewind to start
+        ringSound.play();
+        clearInterval(timer); // eq. break
         isRunning = false;
         isWorkSession = !isWorkSession;
-        timeLeft = isWorkSession ? 50 * 60 : 10 * 60;
+        timeLeft = isWorkSession ? work * 60 : rest * 60;
         statusDisplay.textContent = isWorkSession ? "Work Session" : "Break Time";
         startTimer();
       }
@@ -35,14 +42,16 @@ function startTimer() {
 }
 
 function pauseTimer() {
+  clickSound.play();
   clearInterval(timer);
   isRunning = false;
 }
 
 function resetTimer() {
+  clickSound.play();
   clearInterval(timer);
   isRunning = false;
-  timeLeft = 50 * 60;
+  timeLeft = work * 60;
   isWorkSession = true;
   statusDisplay.textContent = "Work Session";
   updateDisplay();

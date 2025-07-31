@@ -5,7 +5,7 @@ body {
   justify-content: center;
   align-items: height: 100vh;
   font-size: 1rem;
-  cursor: url('pomodoro.png'), auto;
+  cursor: url('images\pomodoro.png'), auto;
 }
 
 
@@ -37,7 +37,7 @@ body {
 .buttons button:hover {
   background-color: #D7DD67;
   box-shadow: 2.5px 2px 4px #658B00;
-  cursor: url('pomodoro.png'), auto;
+  cursor: url('images\pomodoro.png'), auto;
   transform: scale(1.05);
 }
 
