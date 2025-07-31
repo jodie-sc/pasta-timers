@@ -1,10 +1,10 @@
 let timer;
-let work = 50;
 let rest = 5;
 let isRunning = false;
 let isWorkSession = true;
 
 const timerDisplay = document.getElementById("timer");
+const work = Number(document.getElementById("minutes").textContent);
 const statusDisplay = document.getElementById("status");
 const startBtn = document.getElementById("start");
 const pauseBtn = document.getElementById("pause");
@@ -13,7 +13,6 @@ const ringSound = document.getElementById('ringSound');
 const clickSound = document.getElementById('clickSound');
 const title = document.getElementsByTagName('title');
 
-work = Number(timerDisplay.textContent.split(':')[0]);
 let timeLeft = work * 60;
 
 function updateDisplay() {
