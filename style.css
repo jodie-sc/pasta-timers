@@ -5,9 +5,8 @@ body {
   justify-content: center;
   align-items: height: 100vh;
   font-size: 1rem;
-  cursor: url('images/pomodoro-cursor.png'), auto;
+  cursor: url('images/cursor.png'), auto;
 }
-
 
 .container {
   text-align: center;
@@ -25,11 +24,40 @@ body {
 #timer {
   font-size: 3rem;
   color: #FD3C16;
-  margin: 1rem 0;
+  margin: 1rem 1rem;
+}
+
+.timer-info {
+  display: flex;
+  align-items: center;
+  margin: 0rem 0.5rem;
+}
+
+.timer-info button {
+  margin: 0rem 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border-width: 0px;
+  box-shadow: 2.5px 2px 4px rgba(0,0,0,.3);
+  transition: background-color 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timer-info button:hover {
+  background-color: #D7DD67;
+  box-shadow: 2.5px 2px 4px #658B00;
+  cursor: url('images/cursor.png'), auto;
+  transform: scale(1.05);
+}
+
+.timer-info button:active {
+  transform: scale(0.90);
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 .buttons button {
-  margin: 0rem 0.5rem;
+  margin: 0.5rem 0.5rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border-radius: 10px;
@@ -42,7 +70,7 @@ body {
 .buttons button:hover {
   background-color: #D7DD67;
   box-shadow: 2.5px 2px 4px #658B00;
-  cursor: url('images/pomodoro-cursor.png'), auto;
+  cursor: url('images/cursor.png'), auto;
   transform: scale(1.05);
 }
 
@@ -52,7 +80,7 @@ body {
 }
 
 .imgs {
-  width: 150px;
-  margin: 1rem;
+  width: 100px;
+  margin: .5rem;
   border-radius: 10px;
 }

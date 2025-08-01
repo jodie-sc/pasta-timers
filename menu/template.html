@@ -3,26 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pasta Timer</title>
+  <title>Timer</title>
   <link rel="stylesheet" href="../style.css" />
-  <link rel="icon" href="../images/pasta-icon.png" type="image/png">
+  <link rel="icon" href="../images/pomodoro-icon.png" type="image/png">
 </head>
 <body>
   <div class="container">
     <h1>Pasta Timer</h1>
-    <div id="timer">10:00</div>
-    <div class="invisible" id="minutes">10</div>
-    <div class="buttons">
-      <button id="start">Start</button>
-      <button id="pause">Pause</button>
-      <button id="reset">Reset</button>
+    <div class="timer-info">
+      <button id="minus">-</button>
+      <div id="timer">00:00</div>
+      <button id="plus">+</button>
     </div>
-    <img src="../images/pasta-icon.png" alt="Pasta Image" class="imgs">
+    <div class="invisible" id="minutes">10</div>
+    <img id="animImg" src="../images/pasta-icon.png" alt="Pasta Image" class="imgs">
+    <div class="buttons">
+      <button id="play">start</button>
+    </div>
     <div class="buttons"> <button onclick="location.href='../index.html'">Menu</button> </div>
-    <p id="status">Work Session</p>
   </div>
   <audio id="ringSound" src="../sounds/kitchen-timer.mp3" preload="auto"></audio>
   <audio id="clickSound" src="../sounds/gas-stove.mp3" preload="auto"></audio>
-  <script src="../script.js"></script>
+  <script src="../app.js"></script>
 </body>
 </html>
