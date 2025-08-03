@@ -1,0 +1,19 @@
+{
+  "name": "pasta-timers",
+  "version": "0.0.0",
+  "description": "Pasta Timers.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jodie-sc/pasta-timers.git"
+  },
+  "author": "Jojoe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jodie-sc/pasta-timers/issues"
+  },
+  "homepage": "https://github.com/jodie-sc/pasta-timers#readme"
+}
