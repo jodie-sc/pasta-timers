@@ -1,3 +1,8 @@
+import { PastaTimer } from "./PastaTimer/PastaTimer";
+
+let PT= new PastaTimer();
+PT.helloWorld();
+
 const timerDisplay = document.getElementById("timer");
 const timeDuration = Number(document.getElementById("minutes").textContent);
 const playBtn = document.getElementById("play");
@@ -9,7 +14,7 @@ const animation = document.getElementById("animImg");
 let timer;
 let isRunning = false;
 let timeLeft = timeDuration * 60;
-const frames = ["../images/pasta-icon.png", "../images/pasta-icon-2.png"];
+const frames = ["../public/images/pasta-icon.png", "../public/images/pasta-icon-2.png"];
 let currentFrame = 0;
 
 function updateDisplay() {
