@@ -1,7 +1,11 @@
 import { PastaTimer } from "./PastaTimer/PastaTimer";
+import { PastaAnimator } from "./PastaAnimator/PastaAnimator";
 
 let PT= new PastaTimer();
 PT.helloWorld();
+
+let PA= new PastaAnimator();
+PA.helloWorld();
 
 const timerDisplay = document.getElementById("timer");
 const timeDuration = Number(document.getElementById("minutes").textContent);
