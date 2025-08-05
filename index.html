@@ -8,7 +8,7 @@
   <link rel="icon" href="images/pasta-icon.png" type="image/png">
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="pastaMenu">
     <h1>Timers</h1>
     <div id="timer"></div>
     <div class="buttons">
@@ -18,14 +18,16 @@
       <button class="btn" data-name="farfalle">
         <img src="public/images/farfalle-icon.png" alt="farfalle" width="50" height="50">
       </button>
-      <button class="btn" data-name="fusili">
-        <img src="public/images/fusili-icon.png" alt="fusili" width="50" height="50">
+      <button class="btn" data-name="fusilli">
+        <img src="public/images/fusilli-icon.png" alt="fusilli" width="50" height="50">
       </button>
       <button class="btn" data-name="penne">
         <img src="public/images/penne-icon.png" alt="penne" width="50" height="50">
       </button>
     </div>
   </div>
+
+  <iframe src="./menu/template.html" id="selectedPastaPage"></iframe>
 
   <script src="../src/app.js"></script>
 </body>

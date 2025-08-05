@@ -28,6 +28,10 @@ body {
   margin: 1rem 1rem;
 }
 
+#selectedPastaPage {
+  display: none
+}
+
 .timer-info {
   display: flex;
   align-items: center;

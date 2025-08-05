@@ -1,14 +1,14 @@
 export const pastaData={
     spaghetti: {
-        link: 'menu/template.html'
+        time: 8
     },
     farfalle: {
-        link: 'menu/template.html'
+        time: 10
     },
-    fusili: {
-        link: 'menu/template.html'
+    fusilli: {
+        time: 9
     },
     penne: {
-        link: 'menu/template.html'
+        time: 12
     }
 } 

@@ -14,15 +14,15 @@ export class PastaTimer {
     currentFrame;
 
     constructor(selectedPasta) {
-        location.href=this.selectedPasta;
-        
-        this.timerDisplay = document.getElementById("timer");
-        this.timeDuration = Number(document.getElementById("minutes").textContent);
-        this.playBtn = document.getElementById("play");
-        this.minusBtn = document.getElementById("minus");
-        this.plusBtn = document.getElementById("plus");
-        this.ringSound = document.getElementById("ringSound");
-        this.animation = document.getElementById("animImg");
+        const templatePage = document.getElementsByTagName("iframe")[0].contentWindow.document;
+        this.timerDisplay = templatePage.getElementById("timer");
+        // this.timeDuration = Number(templatePage.getElementById("minutes").textContent);
+        this.timeDuration = selectedPasta.time;
+        this.playBtn = templatePage.getElementById("play");
+        this.minusBtn = templatePage.getElementById("minus");
+        this.plusBtn = templatePage.getElementById("plus");
+        this.ringSound = templatePage.getElementById("ringSound");
+        this.animation = templatePage.getElementById("animImg");
         this.frames = ["../public/images/pasta-icon.png", "../public/images/pasta-icon-2.png"];
 
         this.selectedPasta=selectedPasta;
