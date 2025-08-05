@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timer</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../public/images/pasta-icon.png" type="image/png">
+</head>
+<body>
+  <div class="container">
+    <h1>Pasta Timer</h1>
+    <div class="timer-info">
+      <button class="btn" id="minus">-</button>
+      <div id="timer">00:00</div>
+      <button class="btn" id="plus">+</button>
+    </div>
+    <div class="invisible" id="minutes">10</div>
+    <img id="animImg" src="../public/images/pasta-icon.png" alt="Pasta Image" class="imgs">
+    <div class="buttons-menu">
+      <button class="btn" id="play">start</button>
+    </div>
+    <div class="buttons-menu"> <button class="btn" id="menu">Menu</button> </div>
+  </div>
+  <audio id="ringSound" src="../public/sounds/kitchen-timer.mp3" preload="auto"></audio>
+  <audio id="clickSound" src="../public/sounds/gas-stove.mp3" preload="auto"></audio>
+</body>
+</html>
